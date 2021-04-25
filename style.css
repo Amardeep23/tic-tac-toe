@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-image: url("./bg2.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+
+}
+.container{
+   margin: 80px 80px;
+   border: 1px solid rgba(214, 33, 33, 0.637);
+   border-radius: 15px;
+   backdrop-filter: blur(5px);
+   background:radial-gradient(at 50% 0%, rgba(0,0,0,0),rgba(255,255,255,1));
+   box-shadow: 10px 10px 30px rgba(0,0,0,0.5));
+   transition: all 0.3s ease-in-out;
+}
+.container:hover{
+    transform: scale(1.05);
+    backdrop-filter: blur(5px);
+   background:radial-gradient(at 50% 0%, rgba(0,0,0,0),rgba(255,255,255,1));
+   box-shadow: 10px 10px 30px rgba(0,0,0,0.5));
+
+}
+
+.title{
+    text-align: center;
+}
+.title span{
+    color: rgb(196, 36, 36);
+    font-size: 1.3em;
+}
+.status-action{
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.status span{
+    color: rgb(52, 212, 52);
+}
+.reset{
+    cursor: pointer;
+
+}
+
+.reset:hover{
+    color:white;
+}
+
+.game-grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    
+
+}
+.game-cell{
+    height: 200px;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    
+    cursor: pointer;
+    align-items: center;
+}
+
+.x,
+.o {
+  cursor: default;
+}
+
+.x::after{
+    content: '×';
+    font-size: 200px;
+}
+
+.o::after{
+    content: '○';
+    color: greenyellow;
+    font-size: 200px;
+}
+
+.won::after {
+    color: orangered;
+  }
+  @media only screen and (max-width: 1024px) {
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 175px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 125px;
+    }
+  }
+
