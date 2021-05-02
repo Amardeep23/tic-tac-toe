@@ -56,6 +56,7 @@ body{
 
 .reset:hover{
     color:white;
+    font-size: 1.3em;
 }
 
 .game-grid{
@@ -64,7 +65,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 15px;
-    
+
 
 }
 .game-cell{
@@ -72,7 +73,9 @@ body{
     display: flex;
     width: 200px;
     justify-content: center;
-    
+    backdrop-filter: blur(5px);
+    background:radial-gradient(at 50% 0%, rgba(0,0,0,0),rgba(255,255,255,1));
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5));
     cursor: pointer;
     align-items: center;
 }
@@ -101,38 +104,37 @@ body{
       margin-top: 25px;
       grid-gap: 10px;
     }
-  
+
     .game-cell {
       height: 150px;
       width: 150px;
     }
-  
+
     .x::after {
       font-size: 150px;
     }
-  
+
     .o::after {
       font-size: 175px;
     }
   }
-  
+
   @media only screen and (max-width: 540px) {
     .container {
       margin: 25px;
       padding: 25px;
     }
-  
+
     .game-cell {
       height: 100px;
       width: 100px;
     }
-  
+
     .x::after {
       font-size: 100px;
     }
-  
+
     .o::after {
       font-size: 125px;
     }
   }
-
